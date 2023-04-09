@@ -1,39 +1,154 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 <head>
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+   <meta name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
    <meta name="description" content="">
    <title></title>
-
-   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
-
-   <!-- Custom Styles -->
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" />
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css" />
+   <!-- <link rel="stylesheet" href="assets/css/darklight-theme.css" /> -->
+   <!-- <link rel="stylesheet" href="assets/css/gitalk.css" /> -->
    <style>
-     :root {
-        --theme-hue: 325; 
-     }
+      .emoji {
+         vertical-align: text-bottom;
+      }
+
+      #docsify-darklight-theme {
+         bottom: 40px;
+         top: unset;
+         right: unset;
+         left: 6px;
+         width: 23px;
+         height: 23px;
+      }
    </style>
 </head>
+
 <body>
    <div id="app"></div>
 
+   <button class="sidebar-toggle" aria-label="Menu">
+      <div id="docsify-darklight-theme">
+         <p>.</p>
+      </div>
+   </button>
+
    <script>
-     // Docsify Configuration
-     window.$docsify = {
-      loadSidebar: true,
-      loadNavbar: true,
-      subMaxLevel: 2
-     };
+      // Docsify Configuration
+      window.$docsify = {
+         title: 'Damon',
+         loadSidebar: true,
+         loadNavbar: true,
+         subMaxLevel: 2,
+         auto2top: true,
+         topMargin: 90,
+         customPageTitle: {
+            prefix: 'Damon',
+         },
+         search: {
+            maxAge: 86400000,
+            paths: 'auto',
+            placeholder: '全文搜索',
+            noData: '没有匹配的内容',
+            depth: 2,
+            hideOtherSidebarContent: true
+         },
+         // 字数统计配置
+         count: {
+            countable: true,
+            position: 'bottom',
+            margin: '10px',
+            float: 'left',
+            fontsize: '0.9em',
+            color: '#116c29',
+            language: 'chinese',
+            localization: {
+               words: "",
+               minute: ""
+            },
+            isExpected: true
+         },
+         progress: {
+            position: "bottom",
+            color: "var(--theme-color,#42b983)",
+            height: "6px",
+         },
+         timeUpdater: {
+            text: "<hr/><div align='left' style='margin:-20px 0 10px;color:#116c29;font-size:0.9em'>最后更新时间: {docsify-updated}</div>",
+            formatUpdated: "{YYYY}/{MM}/{DD}",
+         },
+      };
    </script>
 
    <!-- Required -->
    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+   <!-- <script src="assets/docsify.min.js"></script> -->
+   <script src="assets/darklight.js"></script>
+
+   <!-- Countable -->
+   <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
+   <!-- <script src="assets/countable.min.js"></script> -->
+
+   <!-- copy-code -->
+   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+   <!-- <script src="assets/docsify-copy-code.min.js"></script> -->
 
    <!-- Recommended -->
-   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+   <!-- <script src="assets/search.min.js"></script> -->
+
+   <!-- 图片缩放 -->
    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+   <!-- <script src="assets/zoom-image.min.js"></script> -->
+
+
+   <!-- 阅读进度 -->
+   <script src="https://cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
+   <!-- <script src="assets/progress.min.js"></script> -->
+
+   <!-- 最后修改时间 -->
+   <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.js"></script>
+   <!-- <script src="assets/time-updater.js"></script> -->
+
+   <!-- 点击红心 -->
+   <script src="//cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/click_heart.js"></script>
+   <!-- <script src="assets/click_heart.js"></script> -->
+
+   <!-- md5 -->
+   <script src="assets/spark-md5.js"></script>
+
+   <!-- Gitalk -->
+   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+   <!-- <script src="assets/docsify-gitalk.min.js"></script> -->
+   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+   <!-- <script src="assets/gitalk.min.js"></script> -->
+
+   <!-- page title -->
+   <script src="//cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-title@1.x/dist/plugin.min.js"></script>
+   <!-- <script src="assets/page-title.min.js"></script> -->
+   <script>
+      const gitalk = new Gitalk({
+         clientID: 'Iv1.911339fac95ffd47',
+         clientSecret: 'be66610bfb5742eb98581c63a55b52f26ace7001',
+         repo: 'essay',
+         owner: 'LuckyCandy',
+         admin: ['LuckyCandy'],
+         id: SparkMD5.hashBinary(window.location.hash),
+         // facebook-like distraction free mode
+         distractionFreeMode: false
+      })
+      window.onhashchange = function (event) {
+         if (event.newURL.split('#')[1] !== event.oldURL.split('#')[1]) {
+            gitalk.options.id = SparkMD5.hashBinary('#' + event.newURL.split('?')[1])
+         }
+      }
+
+   </script>
+
 </body>
+
 </html>
