@@ -1,22 +1,8 @@
----
-title: "Selenium_webdriver"
-subtitle: ""
-summary: "Selenium_webdriver下常见的chromium配置"
-date: 2023-03-02T15:46:31+08:00
-lastmod: "2022-10-01"
-draft: false
-image: "/images/crawler/selenium-chrome.png"
-tags: ["crawler"]
-categories: ["爬虫"]
-series: ["Selenium"]
----
-
 # Selenium中webdriver的介绍
 > 版本：Selenium 4
 
 
-## 1. webdriver的option
-### 1.1 公共配置
+## 1. 公共配置
 #### pageLoadStrategy
 共有三种类型的页面加载策略.
 
@@ -42,7 +28,8 @@ none|Any|options.page_load_strategy = 'none'|完全不阻塞
 * 模拟网站后端响应
 * 在复杂的网络拓扑结构或严格的公司限制/政策下访问目标站点.
 
-### 1.2 各种浏览器的特殊配置
+## 各种浏览器的特殊配置
+
 Seleniums使用add_argument(args)的方式，将args参数在启动浏览器时使用。
 
 常见的chromium options有一下一些：

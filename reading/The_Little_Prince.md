@@ -1,17 +1,4 @@
----
-title: "The_Little_Prince"
-subtitle: "安托万·德·圣修伯里"
-date: 2023-03-06T11:35:40+08:00
-lastmod: "2023-03-09"
-draft: false
-description: "我是文章的描述"
-summary: "小王子精美句子摘抄"
-image: "/images/reading/back.jpg"
-tags: ["Hugo"]
-categories: ["句摘"]
----
-
-# The Little Prince
+# The Little Prince<!-- {docsify-ignore-all} -->
 ## Preface
 
 > it is only with th heart that one can see right; what is essential is invisible to the eye.
@@ -87,5 +74,4 @@ categories: ["句摘"]
 
 
 翻译：审判自己比审判别人要难得多啊。审判好自己，那么你就是一位真正的智者
-
 

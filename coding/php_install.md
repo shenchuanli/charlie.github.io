@@ -1,15 +1,3 @@
-+++
-title = "编译安装PHP7.4"
-summary = "如何避免在编译PHP过程中的大坑"
-date = 2018-06-13T12:30:34+08:00
-draft = false
-share = true
-author = "Damon"
-tags = ["php", "php编译安装"]
-categories = ["PHP"]
-image = "/images/php/php.png"
-+++
-
 # 编译安装PHP7.4
 > 操作环境：  
 php: https://www.php.net/distributions/php-7.4.21.tar.gz  

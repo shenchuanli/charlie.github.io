@@ -1,18 +1,3 @@
----
-
-title: "K8S-yaml配置解释"
-summary: "yaml配置解释"
-date: 2022-05-27T09:50:00+08:00
-draft: false
-share: true
-author: "Damon"
-tags: ["k8s", "Kubernetes"]
-categories: ["k8s"]
-slug: "k8s.yaml"
-image: "/images/k8s/k8s.png"
-
----
-
 # K8S-yaml配置解释
 
 ```yaml
