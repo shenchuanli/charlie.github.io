@@ -1,69 +1,154 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<html lang="zh-cn">
+
 <head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.101.0" />
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+   <meta name="description" content="">
+   <meta name="referrer" content="no-referrer-when-downgrade">
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title></title>
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" />
+   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css" />
+   
+   <!-- <link rel="stylesheet" href="assets/css/darklight-theme.css" /> -->
+   <!-- <link rel="stylesheet" href="assets/css/gitalk.css" /> -->
+   <style>
+      .emoji {
+         vertical-align: text-bottom;
+      }
 
-  <title>My New Hugo Site</title>
-  <meta name="description" content="" />
-
-  
-  <link type="text/css" rel="stylesheet" href="https://shenchuanli.github.io/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://shenchuanli.github.io/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://shenchuanli.github.io/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://shenchuanli.github.io/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
-
-
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
-
-  
-  <link href="https://shenchuanli.github.io/index.xml" rel="alternate" type="application/rss+xml" title="My New Hugo Site" />
-  
+      #docsify-darklight-theme {
+         bottom: 40px;
+         top: unset;
+         right: unset;
+         left: 6px;
+         width: 23px;
+         height: 23px;
+      }
+   </style>
 </head>
 
-  <body class=" ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://shenchuanli.github.io/"><h1>My New Hugo Site</h1></a>
-      <p class="lead">
-      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
-      </p>
-    </div>
+<body>
+   <div id="app"></div>
 
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="https://shenchuanli.github.io/">Home</a> </li>
-        
-      </ul>
-    </nav>
+   <button class="sidebar-toggle" aria-label="Menu">
+      <div id="docsify-darklight-theme">
+         <p>.</p>
+      </div>
+   </button>
 
-    <p>&copy; 2023. All rights reserved. </p>
-  </div>
-</aside>
+   <script>
+      // Docsify Configuration
+      window.$docsify = {
+         title: 'Damon',
+         loadSidebar: true,
+         loadNavbar: true,
+         subMaxLevel: 2,
+         auto2top: true,
+         topMargin: 90,
+         routerMode: 'history',
+         customPageTitle: {
+            prefix: 'Damon',
+         },
+         search: {
+            maxAge: 86400000,
+            paths: 'auto',
+            placeholder: '全文搜索',
+            noData: '没有匹配的内容',
+            depth: 2,
+            hideOtherSidebarContent: true
+         },
+         // 字数统计配置
+         count: {
+            countable: true,
+            position: 'bottom',
+            margin: '10px',
+            float: 'left',
+            fontsize: '0.9em',
+            color: '#116c29',
+            language: 'chinese',
+            localization: {
+               words: "",
+               minute: ""
+            },
+            isExpected: true
+         },
+         timeUpdater: {
+            text: "最近一次修改: {docsify-updated}",
+            formatUpdated: "{YYYY}/{MM}/{DD}",
+         },
+         progress: {
+            position: "bottom",
+            color: "var(--theme-color,#42b983)",
+            height: "6px",
+         },
+         plugins: []
+      };
+   </script>
 
-    <main class="content container">
-    <div class="posts">
-<article class="post">
-  <h1 class="post-title">
-    <a href="https://shenchuanli.github.io/post/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1%E9%80%89%E5%9E%8B/">First</a>
-  </h1>
-  <time datetime="2023-02-22T16:37:57&#43;0800" class="post-date">Wed, Feb 22, 2023</time>
-  Hello Hugo 1. aaa 1. bbb 1. ccc 
-  
-</article>
-</div>
-    </main>
+   <!-- Required -->
+   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+   <!-- <script src="assets/docsify.min.js"></script> -->
+   <script src="/assets/darklight.js"></script>
 
-    
-      
-    
-  </body>
+   <!-- plugins -->
+   <script src="/assets/plugins.mix.js"></script>
+
+   <!-- copy-code -->
+   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+   <!-- <script src="assets/docsify-copy-code.min.js"></script> -->
+
+   <!-- Recommended -->
+   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+   <!-- <script src="assets/search.min.js"></script> -->
+
+   <!-- 图片缩放 -->
+   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+   <!-- <script src="assets/zoom-image.min.js"></script> -->
+
+
+   <!-- 阅读进度 -->
+   <script src="https://cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
+   <!-- <script src="assets/progress.min.js"></script> -->
+
+   <!-- 点击红心 -->
+   <script src="//cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/click_heart.js"></script>
+   <!-- <script src="assets/click_heart.js"></script> -->
+
+   <!-- md5 -->
+   <script src="/assets/spark-md5.js"></script>
+
+   <!-- Gitalk -->
+   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+   <!-- <script src="assets/gitalk.min.js"></script> -->
+
+   <!-- page title -->
+   <script src="//cdn.jsdelivr.net/npm/@sujaykumarh/docsify-plugin-title@1.x/dist/plugin.min.js"></script>
+   <!-- <script src="assets/page-title.min.js"></script> -->
+   <!-- 访问量展示 -->
+   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+   <script>
+      const gitalk = new Gitalk({
+         clientID: '42925af8fe30f972bf4f',
+         clientSecret: 'fdc3d87e9c81fe6acfb8732e6ce5399cdfb583a4',
+         repo: 'Comments',
+         owner: 'LuckyCandy',
+         admin: ['LuckyCandy'],
+         id: SparkMD5.hashBinary(window.location.hash),
+         // facebook-like distraction free mode
+         distractionFreeMode: false
+      })
+      window.onhashchange = function (event) {
+         if (event.newURL.split('#')[1] !== event.oldURL.split('#')[1]) {
+            gitalk.options.id = SparkMD5.hashBinary('#' + event.newURL.split('?')[1])
+         }
+      }
+
+   </script>
+
+</body>
+
 </html>
