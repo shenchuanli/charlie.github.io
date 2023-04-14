@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="为键盘工作者设计的单词记忆与英语肌肉记忆锻炼软件 / Words learning and English muscle memory training software designed for keyboard workers"
+    />
+    <link rel="icon" href="https://shenchuanli.github.io/qwerty/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://shenchuanli.github.io/qwerty/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://shenchuanli.github.io/qwerty/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://shenchuanli.github.io/qwerty/favicon-16x16.png" />
+
+    <link rel="manifest" href="https://shenchuanli.github.io/qwerty/manifest.json" />
+    <title>Qwerty Learner</title>
+    <script>
+      // Dark mode init
+      if (
+        ('state' in localStorage && JSON.parse(localStorage.state).darkMode) ||
+        (!('state' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark')
+      }
+    </script>
+    <script type="module" crossorigin src="https://shenchuanli.github.io/qwerty/assets/index-e40b751e.js"></script>
+    <link rel="stylesheet" href="https://shenchuanli.github.io/qwerty/assets/index-deb9f281.css">
+  </head>
+  <body>
+    <noscript>
+      <div>You need to enable JavaScript to run QWERTY Learner.</div>
+      <div>你需要启用 JavaScript 来运行 QWERTY Learner。</div>
+    </noscript>
+    <div id="root"></div>
+    
+  </body>
+</html>
